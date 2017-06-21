@@ -48,8 +48,9 @@ namespace DXApplication1
            
         }
 
-     
-
-       
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            //Rol ekleme işlemi yapılacak.
+        }
     }
 }

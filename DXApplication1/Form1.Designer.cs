@@ -44,6 +44,9 @@
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dgvListRoles = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnAddRole = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
@@ -51,6 +54,8 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabFormPage2 = new DevExpress.XtraBars.TabFormPage();
             this.tabFormContentContainer1 = new DevExpress.XtraBars.TabFormContentContainer();
+            this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
+            this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.ribbonControl2 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -58,11 +63,6 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabFormPage3 = new DevExpress.XtraBars.TabFormPage();
             this.tabFormContentContainer2 = new DevExpress.XtraBars.TabFormContentContainer();
-            this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.dgvListRoles = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
-            this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
@@ -71,14 +71,14 @@
             this.tabNavigationPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
-            this.tabFormContentContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListRoles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            this.tabFormContentContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFormControl1
@@ -91,7 +91,7 @@
             this.tabFormControl1.Pages.Add(this.tabFormPage1);
             this.tabFormControl1.Pages.Add(this.tabFormPage2);
             this.tabFormControl1.Pages.Add(this.tabFormPage3);
-            this.tabFormControl1.SelectedPage = this.tabFormPage2;
+            this.tabFormControl1.SelectedPage = this.tabFormPage1;
             this.tabFormControl1.Size = new System.Drawing.Size(919, 50);
             this.tabFormControl1.TabForm = this;
             this.tabFormControl1.TabIndex = 0;
@@ -214,6 +214,31 @@
             this.simpleButton1.Size = new System.Drawing.Size(68, 34);
             this.simpleButton1.TabIndex = 0;
             this.simpleButton1.Text = "Ekle";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // tabNavigationPage2
+            // 
+            this.tabNavigationPage2.Caption = "Rol Listeme";
+            this.tabNavigationPage2.Controls.Add(this.gridControl1);
+            this.tabNavigationPage2.Name = "tabNavigationPage2";
+            this.tabNavigationPage2.Size = new System.Drawing.Size(901, 277);
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.dgvListRoles;
+            this.gridControl1.MenuManager = this.tabFormDefaultManager1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(901, 277);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvListRoles});
+            // 
+            // dgvListRoles
+            // 
+            this.dgvListRoles.GridControl = this.gridControl1;
+            this.dgvListRoles.Name = "dgvListRoles";
             // 
             // ribbonControl1
             // 
@@ -277,6 +302,26 @@
             this.tabFormContentContainer1.Size = new System.Drawing.Size(919, 463);
             this.tabFormContentContainer1.TabIndex = 6;
             // 
+            // tabPane1
+            // 
+            this.tabPane1.Controls.Add(this.tabNavigationPage3);
+            this.tabPane1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPane1.Location = new System.Drawing.Point(0, 141);
+            this.tabPane1.Name = "tabPane1";
+            this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.tabNavigationPage3});
+            this.tabPane1.RegularSize = new System.Drawing.Size(919, 322);
+            this.tabPane1.SelectedPage = this.tabNavigationPage3;
+            this.tabPane1.Size = new System.Drawing.Size(919, 322);
+            this.tabPane1.TabIndex = 1;
+            this.tabPane1.Text = "tabPane1";
+            // 
+            // tabNavigationPage3
+            // 
+            this.tabNavigationPage3.Caption = "Kullanıcı Listesi";
+            this.tabNavigationPage3.Name = "tabNavigationPage3";
+            this.tabNavigationPage3.Size = new System.Drawing.Size(901, 277);
+            // 
             // ribbonControl2
             // 
             this.ribbonControl2.ExpandCollapseItem.Id = 0;
@@ -335,50 +380,6 @@
             this.tabFormContentContainer2.Size = new System.Drawing.Size(919, 463);
             this.tabFormContentContainer2.TabIndex = 6;
             // 
-            // tabNavigationPage2
-            // 
-            this.tabNavigationPage2.Caption = "Rol Listeme";
-            this.tabNavigationPage2.Controls.Add(this.gridControl1);
-            this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(901, 277);
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.dgvListRoles;
-            this.gridControl1.MenuManager = this.tabFormDefaultManager1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(901, 277);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvListRoles});
-            // 
-            // dgvListRoles
-            // 
-            this.dgvListRoles.GridControl = this.gridControl1;
-            this.dgvListRoles.Name = "dgvListRoles";
-            // 
-            // tabPane1
-            // 
-            this.tabPane1.Controls.Add(this.tabNavigationPage3);
-            this.tabPane1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPane1.Location = new System.Drawing.Point(0, 141);
-            this.tabPane1.Name = "tabPane1";
-            this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
-            this.tabNavigationPage3});
-            this.tabPane1.RegularSize = new System.Drawing.Size(919, 322);
-            this.tabPane1.SelectedPage = this.tabNavigationPage3;
-            this.tabPane1.Size = new System.Drawing.Size(919, 322);
-            this.tabPane1.TabIndex = 1;
-            this.tabPane1.Text = "tabPane1";
-            // 
-            // tabNavigationPage3
-            // 
-            this.tabNavigationPage3.Caption = "Kullanıcı Listesi";
-            this.tabNavigationPage3.Name = "tabNavigationPage3";
-            this.tabNavigationPage3.Size = new System.Drawing.Size(901, 277);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -388,7 +389,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Controls.Add(this.tabFormContentContainer1);
+            this.Controls.Add(this.xtraScrollableControl1);
             this.Controls.Add(this.tabFormControl1);
             this.Name = "Form1";
             this.TabFormControl = this.tabFormControl1;
@@ -402,15 +403,15 @@
             this.tabNavigationPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
-            this.tabFormContentContainer1.ResumeLayout(false);
-            this.tabFormContentContainer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).EndInit();
             this.tabNavigationPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListRoles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            this.tabFormContentContainer1.ResumeLayout(false);
+            this.tabFormContentContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

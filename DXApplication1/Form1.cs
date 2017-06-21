@@ -52,5 +52,12 @@ namespace DXApplication1
         {
             //Rol ekleme işlemi yapılacak.
         }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //Deneme 1-2
+
+            string a = "dsad";
+        }
     }
 }

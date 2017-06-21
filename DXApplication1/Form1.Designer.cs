@@ -91,7 +91,7 @@
             this.tabFormControl1.Pages.Add(this.tabFormPage1);
             this.tabFormControl1.Pages.Add(this.tabFormPage2);
             this.tabFormControl1.Pages.Add(this.tabFormPage3);
-            this.tabFormControl1.SelectedPage = this.tabFormPage1;
+            this.tabFormControl1.SelectedPage = this.tabFormPage2;
             this.tabFormControl1.Size = new System.Drawing.Size(919, 50);
             this.tabFormControl1.TabForm = this;
             this.tabFormControl1.TabIndex = 0;
@@ -351,6 +351,7 @@
             this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
             this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
             this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // ribbonPage2
             // 
@@ -389,7 +390,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Controls.Add(this.xtraScrollableControl1);
+            this.Controls.Add(this.tabFormContentContainer1);
             this.Controls.Add(this.tabFormControl1);
             this.Name = "Form1";
             this.TabFormControl = this.tabFormControl1;

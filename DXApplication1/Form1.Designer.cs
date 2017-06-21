@@ -63,6 +63,8 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabFormPage3 = new DevExpress.XtraBars.TabFormPage();
             this.tabFormContentContainer2 = new DevExpress.XtraBars.TabFormContentContainer();
+            this.grcUsers = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
@@ -78,7 +80,10 @@
             this.tabFormContentContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
+            this.tabNavigationPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFormControl1
@@ -319,6 +324,7 @@
             // tabNavigationPage3
             // 
             this.tabNavigationPage3.Caption = "Kullanıcı Listesi";
+            this.tabNavigationPage3.Controls.Add(this.grcUsers);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
             this.tabNavigationPage3.Size = new System.Drawing.Size(901, 277);
             // 
@@ -381,6 +387,23 @@
             this.tabFormContentContainer2.Size = new System.Drawing.Size(919, 463);
             this.tabFormContentContainer2.TabIndex = 6;
             // 
+            // grcUsers
+            // 
+            this.grcUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcUsers.Location = new System.Drawing.Point(0, 0);
+            this.grcUsers.MainView = this.gridView1;
+            this.grcUsers.MenuManager = this.tabFormDefaultManager1;
+            this.grcUsers.Name = "grcUsers";
+            this.grcUsers.Size = new System.Drawing.Size(901, 277);
+            this.grcUsers.TabIndex = 0;
+            this.grcUsers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.grcUsers;
+            this.gridView1.Name = "gridView1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,7 +435,10 @@
             this.tabFormContentContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
+            this.tabNavigationPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grcUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,7 +479,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView dgvListRoles;
         private DevExpress.XtraBars.Navigation.TabPane tabPane1;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage3;
-
+        private DevExpress.XtraGrid.GridControl grcUsers;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
 

@@ -50,14 +50,21 @@ namespace DXApplication1
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            //Rol ekleme işlemi yapılacak.
+           
         }
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //Deneme 1-2
+            grcUsers.DataSource = db.Users.Select(x => new {
 
-            string a = "dsad";
+                Ad = x.Username,
+                Şifre = x.Password,
+                Rolü = x.Role.RoleName,
+                Kayıt_Tarihi=x.RegisterDate
+
+
+            }).ToList();
+
         }
     }
 }

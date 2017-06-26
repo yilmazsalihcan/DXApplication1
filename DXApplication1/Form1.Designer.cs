@@ -56,6 +56,8 @@
             this.tabFormContentContainer1 = new DevExpress.XtraBars.TabFormContentContainer();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.grcUsers = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbonControl2 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -63,8 +65,23 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.tabFormPage3 = new DevExpress.XtraBars.TabFormPage();
             this.tabFormContentContainer2 = new DevExpress.XtraBars.TabFormContentContainer();
-            this.grcUsers = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tabPane2 = new DevExpress.XtraBars.Navigation.TabPane();
+            this.tabNavigationPage4 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.btnAddTask = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.dtFinish = new DevExpress.XtraEditors.DateEdit();
+            this.dtStart = new DevExpress.XtraEditors.DateEdit();
+            this.txtTitle = new DevExpress.XtraEditors.TextEdit();
+            this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
+            this.tabNavigationPage5 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.ribbonControl3 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
@@ -81,9 +98,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).BeginInit();
+            this.tabFormContentContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPane2)).BeginInit();
+            this.tabPane2.SuspendLayout();
+            this.tabNavigationPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFinish.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFinish.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFormControl1
@@ -96,7 +124,7 @@
             this.tabFormControl1.Pages.Add(this.tabFormPage1);
             this.tabFormControl1.Pages.Add(this.tabFormPage2);
             this.tabFormControl1.Pages.Add(this.tabFormPage3);
-            this.tabFormControl1.SelectedPage = this.tabFormPage2;
+            this.tabFormControl1.SelectedPage = this.tabFormPage3;
             this.tabFormControl1.Size = new System.Drawing.Size(919, 50);
             this.tabFormControl1.TabForm = this;
             this.tabFormControl1.TabIndex = 0;
@@ -328,6 +356,23 @@
             this.tabNavigationPage3.Name = "tabNavigationPage3";
             this.tabNavigationPage3.Size = new System.Drawing.Size(901, 277);
             // 
+            // grcUsers
+            // 
+            this.grcUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grcUsers.Location = new System.Drawing.Point(0, 0);
+            this.grcUsers.MainView = this.gridView1;
+            this.grcUsers.MenuManager = this.tabFormDefaultManager1;
+            this.grcUsers.Name = "grcUsers";
+            this.grcUsers.Size = new System.Drawing.Size(901, 277);
+            this.grcUsers.TabIndex = 0;
+            this.grcUsers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.grcUsers;
+            this.gridView1.Name = "gridView1";
+            // 
             // ribbonControl2
             // 
             this.ribbonControl2.ExpandCollapseItem.Id = 0;
@@ -381,28 +426,178 @@
             // 
             // tabFormContentContainer2
             // 
+            this.tabFormContentContainer2.Controls.Add(this.tabPane2);
+            this.tabFormContentContainer2.Controls.Add(this.ribbonControl3);
             this.tabFormContentContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabFormContentContainer2.Location = new System.Drawing.Point(0, 50);
             this.tabFormContentContainer2.Name = "tabFormContentContainer2";
             this.tabFormContentContainer2.Size = new System.Drawing.Size(919, 463);
             this.tabFormContentContainer2.TabIndex = 6;
             // 
-            // grcUsers
+            // tabPane2
             // 
-            this.grcUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grcUsers.Location = new System.Drawing.Point(0, 0);
-            this.grcUsers.MainView = this.gridView1;
-            this.grcUsers.MenuManager = this.tabFormDefaultManager1;
-            this.grcUsers.Name = "grcUsers";
-            this.grcUsers.Size = new System.Drawing.Size(901, 277);
-            this.grcUsers.TabIndex = 0;
-            this.grcUsers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.tabPane2.Controls.Add(this.tabNavigationPage4);
+            this.tabPane2.Controls.Add(this.tabNavigationPage5);
+            this.tabPane2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPane2.Location = new System.Drawing.Point(0, 141);
+            this.tabPane2.Name = "tabPane2";
+            this.tabPane2.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
+            this.tabNavigationPage4,
+            this.tabNavigationPage5});
+            this.tabPane2.RegularSize = new System.Drawing.Size(919, 322);
+            this.tabPane2.SelectedPage = this.tabNavigationPage5;
+            this.tabPane2.Size = new System.Drawing.Size(919, 322);
+            this.tabPane2.TabIndex = 3;
+            this.tabPane2.Text = "tabPane2";
             // 
-            // gridView1
+            // tabNavigationPage4
             // 
-            this.gridView1.GridControl = this.grcUsers;
-            this.gridView1.Name = "gridView1";
+            this.tabNavigationPage4.Caption = "Görev Ekle";
+            this.tabNavigationPage4.Controls.Add(this.btnAddTask);
+            this.tabNavigationPage4.Controls.Add(this.labelControl4);
+            this.tabNavigationPage4.Controls.Add(this.labelControl3);
+            this.tabNavigationPage4.Controls.Add(this.labelControl2);
+            this.tabNavigationPage4.Controls.Add(this.labelControl1);
+            this.tabNavigationPage4.Controls.Add(this.dtFinish);
+            this.tabNavigationPage4.Controls.Add(this.dtStart);
+            this.tabNavigationPage4.Controls.Add(this.txtTitle);
+            this.tabNavigationPage4.Controls.Add(this.txtDescription);
+            this.tabNavigationPage4.Name = "tabNavigationPage4";
+            this.tabNavigationPage4.Size = new System.Drawing.Size(901, 277);
+            // 
+            // btnAddTask
+            // 
+            this.btnAddTask.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddTask.ImageOptions.Image")));
+            this.btnAddTask.Location = new System.Drawing.Point(443, 225);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(95, 34);
+            this.btnAddTask.TabIndex = 8;
+            this.btnAddTask.Text = "Oluştur";
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(289, 202);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(48, 13);
+            this.labelControl4.TabIndex = 7;
+            this.labelControl4.Text = "Bitiş Tarihi";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(289, 172);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(73, 13);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Başlangıç Tarihi";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(289, 75);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(29, 13);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "Görev";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(289, 45);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(61, 13);
+            this.labelControl1.TabIndex = 4;
+            this.labelControl1.Text = "Görev Başlığı";
+            // 
+            // dtFinish
+            // 
+            this.dtFinish.EditValue = null;
+            this.dtFinish.Location = new System.Drawing.Point(385, 199);
+            this.dtFinish.MenuManager = this.tabFormDefaultManager1;
+            this.dtFinish.Name = "dtFinish";
+            this.dtFinish.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtFinish.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtFinish.Size = new System.Drawing.Size(244, 20);
+            this.dtFinish.TabIndex = 3;
+            // 
+            // dtStart
+            // 
+            this.dtStart.EditValue = null;
+            this.dtStart.Location = new System.Drawing.Point(385, 169);
+            this.dtStart.MenuManager = this.tabFormDefaultManager1;
+            this.dtStart.Name = "dtStart";
+            this.dtStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtStart.Size = new System.Drawing.Size(244, 20);
+            this.dtStart.TabIndex = 2;
+            // 
+            // txtTitle
+            // 
+            this.txtTitle.Location = new System.Drawing.Point(385, 42);
+            this.txtTitle.MenuManager = this.tabFormDefaultManager1;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(244, 20);
+            this.txtTitle.TabIndex = 0;
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Location = new System.Drawing.Point(385, 68);
+            this.txtDescription.MenuManager = this.tabFormDefaultManager1;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(244, 95);
+            this.txtDescription.TabIndex = 1;
+            // 
+            // tabNavigationPage5
+            // 
+            this.tabNavigationPage5.Caption = "Görev Listele";
+            this.tabNavigationPage5.Name = "tabNavigationPage5";
+            this.tabNavigationPage5.Size = new System.Drawing.Size(901, 277);
+            // 
+            // ribbonControl3
+            // 
+            this.ribbonControl3.ExpandCollapseItem.Id = 0;
+            this.ribbonControl3.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl3.ExpandCollapseItem,
+            this.barButtonItem1,
+            this.barButtonItem5});
+            this.ribbonControl3.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl3.MaxItemId = 3;
+            this.ribbonControl3.Name = "ribbonControl3";
+            this.ribbonControl3.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage3});
+            this.ribbonControl3.Size = new System.Drawing.Size(919, 141);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Görev Ekle";
+            this.barButtonItem1.Id = 1;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem5
+            // 
+            this.barButtonItem5.Caption = "Görevleri Görüntüle";
+            this.barButtonItem5.Id = 2;
+            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
+            this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.barButtonItem5.Name = "barButtonItem5";
+            // 
+            // ribbonPage3
+            // 
+            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage3.Name = "ribbonPage3";
+            this.ribbonPage3.Text = "ribbonPage3";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem5);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
             // Form1
             // 
@@ -413,7 +608,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Controls.Add(this.tabFormContentContainer1);
+            this.Controls.Add(this.tabFormContentContainer2);
             this.Controls.Add(this.tabFormControl1);
             this.Name = "Form1";
             this.TabFormControl = this.tabFormControl1;
@@ -436,9 +631,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl2)).EndInit();
+            this.tabFormContentContainer2.ResumeLayout(false);
+            this.tabFormContentContainer2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabPane2)).EndInit();
+            this.tabPane2.ResumeLayout(false);
+            this.tabNavigationPage4.ResumeLayout(false);
+            this.tabNavigationPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFinish.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFinish.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,6 +689,23 @@
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage3;
         private DevExpress.XtraGrid.GridControl grcUsers;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.Navigation.TabPane tabPane2;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage4;
+        private DevExpress.XtraEditors.DateEdit dtStart;
+        private DevExpress.XtraEditors.TextEdit txtTitle;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage5;
+        private DevExpress.XtraEditors.SimpleButton btnAddTask;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.DateEdit dtFinish;
+        private DevExpress.XtraEditors.MemoEdit txtDescription;
     }
 }
 

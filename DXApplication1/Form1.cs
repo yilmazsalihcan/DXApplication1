@@ -66,5 +66,29 @@ namespace DXApplication1
             }).ToList();
 
         }
+
+       
+
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Tasks gorevler = new Tasks();
+                gorevler.TaskTitle = txtTitle.Text;
+                gorevler.TaskDescription = txtDescription.Text;
+                gorevler.StartTime = Convert.ToDateTime(dtStart.SelectedText);
+                gorevler.FinishTime = Convert.ToDateTime(dtFinish.SelectedText);
+                gorevler.StatusId = 1;
+                db.Tasks.Add(gorevler);
+                db.SaveChanges();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Hatalı bir işlem yaptınız");
+            }
+
+
+        }
     }
 }

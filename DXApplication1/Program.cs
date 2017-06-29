@@ -20,7 +20,7 @@ namespace DXApplication1
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            new Form1().Show();
+            new UserPage().Show();
             Application.Run();
         }
     }

@@ -77,11 +77,16 @@
             this.txtTitle = new DevExpress.XtraEditors.TextEdit();
             this.txtDescription = new DevExpress.XtraEditors.MemoEdit();
             this.tabNavigationPage5 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.gcTaskList = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ribbonControl3 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.tabFormPage4 = new DevExpress.XtraBars.TabFormPage();
+            this.tabFormContentContainer3 = new DevExpress.XtraBars.TabFormContentContainer();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).BeginInit();
             this.xtraScrollableControl1.SuspendLayout();
@@ -111,7 +116,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
+            this.tabNavigationPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gcTaskList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl3)).BeginInit();
+            this.tabFormContentContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFormControl1
@@ -124,13 +134,15 @@
             this.tabFormControl1.Pages.Add(this.tabFormPage1);
             this.tabFormControl1.Pages.Add(this.tabFormPage2);
             this.tabFormControl1.Pages.Add(this.tabFormPage3);
-            this.tabFormControl1.SelectedPage = this.tabFormPage3;
+            this.tabFormControl1.Pages.Add(this.tabFormPage4);
+            this.tabFormControl1.SelectedPage = this.tabFormPage4;
             this.tabFormControl1.Size = new System.Drawing.Size(919, 50);
             this.tabFormControl1.TabForm = this;
             this.tabFormControl1.TabIndex = 0;
             this.tabFormControl1.TabStop = false;
             this.tabFormControl1.TitleItemLinks.Add(this.skinBarSubItem1);
             this.tabFormControl1.OuterFormCreating += new DevExpress.XtraBars.OuterFormCreatingEventHandler(this.OnOuterFormCreating);
+            this.tabFormControl1.Click += new System.EventHandler(this.tabFormControl1_Click);
             // 
             // skinBarSubItem1
             // 
@@ -552,8 +564,26 @@
             // tabNavigationPage5
             // 
             this.tabNavigationPage5.Caption = "Görev Listele";
+            this.tabNavigationPage5.Controls.Add(this.gcTaskList);
             this.tabNavigationPage5.Name = "tabNavigationPage5";
             this.tabNavigationPage5.Size = new System.Drawing.Size(901, 277);
+            // 
+            // gcTaskList
+            // 
+            this.gcTaskList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcTaskList.Location = new System.Drawing.Point(0, 0);
+            this.gcTaskList.MainView = this.gridView2;
+            this.gcTaskList.MenuManager = this.tabFormDefaultManager1;
+            this.gcTaskList.Name = "gcTaskList";
+            this.gcTaskList.Size = new System.Drawing.Size(901, 277);
+            this.gcTaskList.TabIndex = 0;
+            this.gcTaskList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.gcTaskList;
+            this.gridView2.Name = "gridView2";
             // 
             // ribbonControl3
             // 
@@ -584,6 +614,7 @@
             this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
             this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
+            this.barButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem5_ItemClick);
             // 
             // ribbonPage3
             // 
@@ -599,6 +630,31 @@
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
+            // tabFormPage4
+            // 
+            this.tabFormPage4.ContentContainer = this.tabFormContentContainer3;
+            this.tabFormPage4.Name = "tabFormPage4";
+            this.tabFormPage4.Text = "Görev Atamaları";
+            // 
+            // tabFormContentContainer3
+            // 
+            this.tabFormContentContainer3.Controls.Add(this.dataGridView1);
+            this.tabFormContentContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabFormContentContainer3.Location = new System.Drawing.Point(0, 50);
+            this.tabFormContentContainer3.Name = "tabFormContentContainer3";
+            this.tabFormContentContainer3.Size = new System.Drawing.Size(919, 463);
+            this.tabFormContentContainer3.TabIndex = 7;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(919, 463);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -608,7 +664,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Controls.Add(this.tabFormContentContainer2);
+            this.Controls.Add(this.tabFormContentContainer3);
             this.Controls.Add(this.tabFormControl1);
             this.Name = "Form1";
             this.TabFormControl = this.tabFormControl1;
@@ -646,7 +702,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtStart.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
+            this.tabNavigationPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gcTaskList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl3)).EndInit();
+            this.tabFormContentContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -706,6 +767,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit dtFinish;
         private DevExpress.XtraEditors.MemoEdit txtDescription;
+        private DevExpress.XtraGrid.GridControl gcTaskList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraBars.TabFormContentContainer tabFormContentContainer3;
+        private DevExpress.XtraBars.TabFormPage tabFormPage4;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
